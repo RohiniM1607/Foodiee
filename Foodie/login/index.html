@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Home Page -->
+    <section class="home">
+        <div class="container">
+            <div class="left">
+                <img src="../images/Donate.jpg" alt="Delicious Food">
+            </div>
+            <div class="right">
+                <div class="form-box" id="loginBox">
+                    <h2>Login</h2>
+                    <label for="email"> User Name</label>
+                    <input type="email" placeholder="Enter Username" required>
+                    <label for="password"> Password</label>
+                    <input type="password" placeholder="Enter Password" required>
+                    <p class="forgot-password">
+                        <span id="forgotPassword" style="cursor: pointer; color: #4d94df;">Forgot Password?</span>
+                    </p>
+                    
+                    <button class="submit-btn">Login</button>
+                    <p class="switch-form">
+                        Don't have account? <span id="showSignup"></span> 
+                        <!-- Sign-up Button -->
+                        <a href="signup.html" class="sign-up-btn-inline">Sign Up</a>
+                    </p>
+                    
+                    <!-- Social login section visible only on the login page -->
+                    <div class="social-login" id="socialLogin">
+                        <p>Login Via</p>
+                        <div class="icons">
+                            <img src="../images/google.png" alt="Google" class="social-icon" id="googleLogin">
+                            <img src="../images/Phone.jpg" alt="Phone" class="social-icon" id="phoneLogin">
+                            <img src="../images/Mail.jpg" alt="Email" class="social-icon" id="emailLogin">
+                            <img src="../images/Facebook.png" alt="Facebook" class="social-icon" id="facebookLogin">
+                        </div>
+                    </div>
+                    
+                
+                    <!-- Forgot Password Modal -->
+                    <div id="forgotPasswordModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" id="closeForgotModal">&times;</span>
+                            <h2>Reset Your Password</h2>
+                            <p>Enter your email address and we'll send you a link to reset your password.</p>
+                            <input type="email" id="resetEmail" placeholder="Enter your email" required>
+                            <button onclick="sendResetLink()">Send Reset Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../navigation/script.js"></script>
+</body>
